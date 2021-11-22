@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert page title</title>
+</head>
+<body>
+    <div>
+        <img src="img/game_1.png"width="300" height="300">
+    </div>
+
+    <button type="button" onclick="changeImg(1)">가위로 바꾸기</button>
+    <button type="button" onclick="changeImg(2)">바위로 바꾸기</button>
+    <button type="button" onclick="changeImg(3)">보로 바꾸기</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        function changeImg(imgNumber) {
+            let $img = $("img");
+
+            if(imgNumber == 1) {
+                $img.attr("src", "img/game_1.png");
+            } else if(imgNumber == 2) {
+                $img.attr("src", "img/game_2.png");
+            } else {
+                $img.attr("src", "img/game_3.png");
+            }
+        }
+    </script>
+</body>
+</html>
