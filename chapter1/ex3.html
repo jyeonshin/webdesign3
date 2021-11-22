@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert page title</title>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        let $liList = $("li");
+
+        document.write("가져온 태그의 수 = " + $liList.length);
+        document.write("<hr>");
+
+        // 제이쿼리 문서 객체들을 저장하고 있는 배열에 인덱스 번호로 접근하면
+        // 해당 제이쿼리 문서 객체가 DOM 형태로 변환되서 접근함
+        let liTag = $liList[0];
+        liTag.style.fontSize = "25px";
+
+        // 제이쿼리 문서 객체들을 저장하고 있는 배열에 eq 메서드를 사용해서 접근하면
+        // 제이쿼리 문서 객체 그대로 접근함
+        let $li = $liList.eq(0);
+        $li.css("font-size", "25px");
+
+        console.log(liTag);
+        console.log($li);
+    </script>
+</body>
+</html>
