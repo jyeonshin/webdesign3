@@ -28,10 +28,11 @@
         let liTag = $liList[0];
         liTag.style.fontSize = "25px";
 
-        // 제이쿼리 문서 객체들을 저장하고 있는 배열에 eq 메서드를 사용해서 접근하면
-        // 제이쿼리 문서 객체 그대로 접근함
-        let $li = $liList.eq(0);
-        $li.css("font-size", "25px");
+        // $("선택자")로 사용해서 태그를 불러오는데
+        // "선택자" 자리에 DOM을 넣으면 제이쿼리 문서 객체화 됨
+        let $li = $(liTag);
+
+        $li.css("color", "red");
 
         console.log(liTag);
         console.log($li);
